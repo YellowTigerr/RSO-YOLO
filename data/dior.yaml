@@ -1,0 +1,27 @@
+path: D:/paperabout/dior-r6  # dataset root dir
+train: train/images  # train images (relative to 'path') 118287 images
+val: val/images  # val images (relative to 'path') 5000 images
+test:  # 20288 of 40670 images, submit to https://competitions.codalab.org/competitions/20794
+
+# Classes
+names:
+   0: airplane
+   1: airport
+   2: baseballfield
+   3: basketballcourt
+   4: bridge
+   5: chimney
+   6: dam
+   7: Expressway-Service-area
+   8: Expressway-toll-station
+   9: golffield
+   10: groundtrackfield
+   11: harbor
+   12: overpass
+   13: ship
+   14: stadium
+   15: storagetank
+   16: tenniscourt
+   17: trainstation
+   18: vehicle
+   19: windmill
