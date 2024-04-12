@@ -4,7 +4,7 @@ Improved YOLOv9 for Oriented Object Detection in Optical Remote Sensing Images
 
 
 # Installation
-Please refer to requirements.txt for installation and dataset preparation.
+Please refer to requirements.txt(./requirements.txt) for installation and dataset preparation.
 
 This repo is based on [yolov9](https://github.com/WongKinYiu/yolov9). 
 
