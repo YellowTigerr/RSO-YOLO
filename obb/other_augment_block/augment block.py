@@ -92,7 +92,6 @@ def automatedMSRCR(img, sigma_list):
 
     return img_retinex
 
-
 def MSRCP(img, sigma_list, low_clip, high_clip):
     img = np.float64(img) + 1.0
 
@@ -123,9 +122,11 @@ def MSRCP(img, sigma_list, low_clip, high_clip):
 
     return img_msrcp
 
-if __name__ == '__main__':
-    data_path = 'data'
+
+def main(data_path)
     img_list = os.listdir(data_path)
+    retinex_path = os.path.join(os.path.dirname(data_path), 'retinex')
+    improve_retinex = os.path.join(os.path.dirname(data_path), 'improve_retinex')
     config = {
     "sigma_list": [15, 80, 250],
     "G": 5.0,
@@ -169,10 +170,12 @@ if __name__ == '__main__':
             config['low_clip'],
             config['high_clip']
         )
+     
+        cv2.imwrite(os.path.join(retinex_path,img_name),img_msrcr)
+        cv2.imwrite(os.path.join(improve_retinex,img_name),img_amsrcr)
 
-        shape = img.shape
-        cv2.imshow('Image', img)
-        cv2.imshow('retinex', img_msrcr)
-        cv2.imshow('Automated retinex', img_amsrcr)
-        cv2.imshow('MSRCP', img_msrcp)
-        cv2.waitKey()
+
+if __name__ == '__main__':
+        path = "img_path"
+        main(path)
+        
