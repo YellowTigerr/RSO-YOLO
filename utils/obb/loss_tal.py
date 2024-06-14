@@ -302,8 +302,11 @@ class RotatedBboxLoss(nn.Module):
         '''
         """IoU loss."""
         weight = target_scores.sum(-1)[fg_mask].unsqueeze(-1)
-        iou = probiou(pred_bboxes[fg_mask], target_bboxes[fg_mask])
-        loss_iou = ((1.0 - iou) * weight).sum() / target_scores_sum
+        # iou = probiou(pred_bboxes[fg_mask], target_bboxes[fg_mask])
+        # loss_iou = ((1.0 - iou) * weight).sum() / target_scores_sum
+                
+        loss_iou = kfiou_loss(pred_bboxes[fg_mask], target_bboxes[fg_mask])
+        loss_iou = loss_iou.mean()
 
         # DFL loss
         if self.use_dfl:
