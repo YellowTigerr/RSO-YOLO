@@ -64,4 +64,4 @@ refer to [yolov9](https://github.com/WongKinYiu/yolov9)
 * 代码问题提issues
 
 ## 其他
-detect前添加部分自注意力模块（Partial Self-Attention, PSA） 可提升map
+detect前添加Partial Self-Attention, PSA（部分自注意力模块） 可提升map
